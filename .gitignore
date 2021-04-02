@@ -3,6 +3,6 @@ node_modules
 .cache/
 public/
 
-content/blog/hello-world
-content/blog/my-second-post
-content/blog/new-beginnings
+content/blog/hello-world/
+content/blog/my-second-post/
+content/blog/new-beginnings/
