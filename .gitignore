@@ -2,3 +2,7 @@ node_modules
 .DS_Store
 .cache/
 public/
+
+content/blog/hello-world
+content/blog/my-second-post
+content/blog/new-beginnings
