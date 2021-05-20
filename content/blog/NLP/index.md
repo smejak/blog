@@ -57,7 +57,20 @@ Before I get into the specifics, I have to quickly go over what HMMs are (and no
 
 ## Part 2: We need to go deeper
 
-1. talk about the machine translation project
-2. briefly how the preprocessing looks and compare to HMM tagger
-3. show the model and the result from one sentence
+When you get into AI, you hear all these big sounding phrases like "computer vision", "natural language processing", or "deep reinforcement learning". It makes an impression that these different fields are very separated, but the truth is, they're not all that different once you scratch the surface. I think the biggest differences are arguably at the data processing level, since once you get to coding the specific models with PyTorch or TensorFlow, natural language processing isn't all that different from computer vision (just to elaborate, the models themselves are quite different since their architecture is built with completely different tasks in mind, but the process is very intuitive compared to data preprocessing).
 
+My second big project in NLP was an English-French translator. This time, all the data was available and the preprocessing was fairly straightforard, all that really needed to be done is tokenize sentences into words and apply padding where necessary (because English and French sentences with the same meaning don't always have the same length). In my final model, I implemented an encoder-decoder model with embedding layers and bidirectional GRU's, which proved to be quite effective at learning the translation task in previous experiments. The full code of the model can be found [here](https://github.com/smejak/Udacity_Natural_Language_Processing_Nanodegree/blob/main/%232%20Machine%20Translation/machine_translation.ipynb) (under "Model 5: Custom (IMPLEMENTATION)").
+
+## Part 3: Final project and conclusion
+
+The final part of the Nanodegree was focused on speech recognition, which, after reading a couple of blog posts and looking more into what's happening in NLP, is probably a little different to what is usually considered NLP, nevertheless, speech is still a crucial part of language (and who doesn't want to know how to make your own version of Siri).
+
+My last project was a speech recognizer using deep neural networks as its primary means of learning to decode sound signals into text. An ASR (Automatic Speech Recognition) pipeline can be boiled down to the following: 
+
+CNN model for feature extraction -> RNN model for learning to identify words from the features -> [CTC](https://towardsdatascience.com/intuitively-understanding-connectionist-temporal-classification-3797e43a86c)(Connectionist Temporal Classification) loss function for converting the RNN outputs into words -> [NLM](https://arxiv.org/abs/1906.03591) (Neural Language Model) making sure the text actually makes sense
+
+The implementation of my ASR project is available [here](https://github.com/smejak/Udacity_Natural_Language_Processing_Nanodegree/tree/main/%233%20Speech%20Recognition) ("sample_models.py" show the individual models, "vui_notebook.ipynb" contains the main code). Truth be told, most of the implementation on my side was once again in the models themselves, the vast majority of the ASR pipeline was provided by Udacity, nevertheless, model building is fun (except maybe when you're waiting 2 hours for a model to train only to find it has worsened since the last hyperparameter change, but there are a numer of automatic hyperparameter tuning solutions that I did not implement due to the relatively small size of the project).
+
+## Final thoughts
+
+I find NLP absolutely fascinating. Looking at an interview with GPT-3, it is clear that we have entered a world where you cannot know for sure what is human-made and what is AI-made, which might be a little bit scary, but I like to think of it as extremely exciting, just think of the possibilities for automation and increased efficiency. Nevertheless, it's still important to understand the current limitations of AI and realize that a lot of the hype around it is artificial (no pun intended). At the end of the day, it is still a bunch of column vectors changing their values based on some error function (which our minds might be too, however; don't want to be undermining the incredible complexity that is behind all the PyTorch/TensorFlow imports). I don't want to get ahead of myself, there's still so much to learn and explore.
