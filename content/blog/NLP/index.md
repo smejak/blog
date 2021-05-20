@@ -1,5 +1,5 @@
 ---
-title: 'Learn NLP, it'll be fun', they said. 'It was fun, we should do this again', said the transformer.
+title: Learn NLP, it'll be fun, they said. It was fun, we should do this again, said the transformer.
 date: "2021-05-20 19:00:00"
 description: "Learning NLP"
 categories: "tech"
