@@ -3,9 +3,9 @@ module.exports = {
     title: `Jakub Smekal Blog`,
     author: {
       name: `Jakub Smekal`,
-      summary: ``,
+      summary: `Writing about machine learning, the brain, and maybe even deep thoughts. Only time will tell.`,
     },
-    description: `Hello`,
+    description: `A blog about the future`,
     siteUrl: `https://jakubsmekal.netlify.app/`,
     social: {
       twitter: ``,
