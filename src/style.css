@@ -159,6 +159,23 @@ h6 > a {
 
 /* Prose */
 
+form {
+  font-weight: bold;
+}
+/* WORK IN PROGRESS - THE FORM STYLING */
+/* .button1 {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 300;
+  text-align: center;
+  transition: all 0.2s;
+  text-transform: center;
+}
+.button1:hover{
+  color:#000000;
+  background-color:#ffffff;
+} */
+
 p {
   line-height: var(--lineHeight-relaxed);
   --baseline-multiplier: 0.179;
