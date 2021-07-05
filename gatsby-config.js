@@ -8,7 +8,8 @@ module.exports = {
     description: `A blog about the future`,
     siteUrl: `https://jakubsmekal.netlify.app/`,
     social: {
-      twitter: ``,
+      twitter: `jakub_smekal`,
+      linkedin: `jakub-smekal`
     },
   },
   plugins: [

@@ -28,6 +28,7 @@ const Bio = () => {
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
+  const social = data.site.siteMetadata?.social
 
   return (
     <div className="bio">
@@ -45,7 +46,11 @@ const Bio = () => {
         <p>
           Author <strong>{author.name}</strong> <br/> {author?.summary || null}
           {` `}
-          
+          <br/>
+          Get in touch with me on <a href={`https://linkedin.com/in/${social?.linkedin || ``}`}>
+            LinkedIn
+          </a>
+          .
         </p>
       )}
     </div>
