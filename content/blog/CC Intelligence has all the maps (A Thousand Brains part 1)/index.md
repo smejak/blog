@@ -1,5 +1,5 @@
 ---
-title: CC Intelligence has all the maps (Thousand Brains part 1)
+title: CC Intelligence has all the maps (A Thousand Brains part 1)
 date: "2021-06-26 13:00:00"
 ---
 
