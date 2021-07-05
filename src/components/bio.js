@@ -47,7 +47,7 @@ const Bio = () => {
           Author <strong>{author.name}</strong> <br/> {author?.summary || null}
           {` `}
           <br/>
-          Get in touch with me on <a href={`https://linkedin.com/in/${social?.linkedin || ``}`}>
+          Get in touch with me via <a href={`https://linkedin.com/in/${social?.linkedin || ``}`}>
             LinkedIn
           </a>
           .
