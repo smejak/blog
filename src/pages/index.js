@@ -27,14 +27,6 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
-        <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-          Interested in more? <br/>
-          <label>Sign up to my newsletter: <input type="email" name="email" id="email" /></label> <button type="submit" >Send</button>
-        </p>
-      </form>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
