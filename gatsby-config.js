@@ -1,63 +1,92 @@
+require(`dotenv`).config()
+
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+
 module.exports = {
   siteMetadata: {
-    title: `Jakub Smekal Blog`,
-    author: {
-      name: `Jakub Smekal`,
-      summary: `Writing about machine learning, the brain, and maybe even some deep thoughts. Only time will tell.`,
-    },
-    description: `A blog about the future`,
-    siteUrl: `https://jakubsmekal.com/`,
-    social: {
-      twitter: `jakub_smekal`,
-      linkedin: `jakub-smekal`
-    },
+    // You can overwrite values here that are used for the SEO component
+    // You can also add new values here to query them like usual
+    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.js
+    siteTitle: `Jakub Smékal`,
+    siteTitleAlt: `Jakub Smékal`,
+    siteHeadline: `Jakub Smékal`,
+    siteUrl: `https://www.jakubsmekal.com`,
+    siteDescription: `Jakub Smékal personal website, blog about machine learning, neuroscience, blockchain, and more.`,
+    siteLanguage: `en`,
+    siteImage: `/headshot.jpg`,
+    author: `@jakub_smekal`,
   },
   plugins: [
-    `gatsby-plugin-image`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
+      // See the theme's README for all available options
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
+        navigation: [
           {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 630,
-            },
+            title: `About`,
+            slug: `/about`,
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+            title: `Blog`,
+            slug: `/blog`,
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+        ],
+        externalLinks: [
+          {
+            name: `Twitter`,
+            url: `https://twitter.com/jakub_smekal`,
+          },
+          {
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/jakub-smekal`,
+          },
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.gstatic.com`],
+        interval: 300,
+        timeout: 30000,
+        // If you plan on changing the font you'll also need to adjust the Theme UI config to edit the CSS
+        // See: https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog#changing-your-fonts
+        web: [
+          {
+            name: `IBM Plex Sans`,
+            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap`,
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Jakub Smekal Blog`,
+        short_name: `Jakub Smekal`,
+        description: `Jakub Smékal personal website, blog about machine learning, neuroscience, blockchain, and more.`,
+        start_url: `/`,
+        background_color: `#fff`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#6B46C1`,
+        display: `standalone`,
+        icons: [
+          {
+            src: `/static/headshot.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/static/headshot.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -65,8 +94,8 @@ module.exports = {
           {
             site {
               siteMetadata {
-                title
-                description
+                title: siteTitle
+                description: siteDescription
                 siteUrl
                 site_url: siteUrl
               }
@@ -75,57 +104,46 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
-                return Object.assign({}, node.frontmatter, {
-                  description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
-            },
+            serialize: ({ query: { site, allPost } }) =>
+              allPost.nodes.map((post) => {
+                const url = site.siteMetadata.siteUrl + post.slug
+                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
+
+                return {
+                  title: post.title,
+                  date: post.date,
+                  excerpt: post.excerpt,
+                  url,
+                  guid: url,
+                  custom_elements: [{ "content:encoded": content }],
+                }
+              }),
             query: `
               {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
+                allPost(sort: { fields: date, order: DESC }) {
                   nodes {
+                    title
+                    date(formatString: "MMMM D, YYYY")
                     excerpt
-                    html
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      date
-                    }
+                    slug
                   }
                 }
               }
             `,
-            output: "/rss.xml",
+            output: `rss.xml`,
+            title: `Jakub Smékal Blog`,
           },
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
+    `gatsby-plugin-gatsby-cloud`,
+    shouldAnalyseBundle && {
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
-        name: `Jakub Smekal Blog`,
-        short_name: `Jakub Smekal`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/profile-pic.jpg`, // This path is relative to the root of the site.
+        analyzerMode: `static`,
+        reportFilename: `_bundle.html`,
+        openAnalyzer: false,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
+  ].filter(Boolean),
 }

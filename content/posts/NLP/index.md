@@ -2,7 +2,7 @@
 title: Learn NLP, it'll be fun, they said. It was fun, we should do this again, said the transformer.
 date: "2021-05-20 19:00:00"
 categories: "tech"
-tags: [nlp, online course, deep learning, ai] 
+tags: [nlp, deep learning, ai]
 ---
 
 After exploring different fields of machine learning for a while now, I decided to give Natural Language Processing (NLP) a shot. As with any ML field, pretty much everything in NLP looks like magic before you start to get into it, and then you're left to wonder how on Earth is it possible that something like this works so well. I'll hopefully get to my philosophical summary of AI in a different post, today, I'd like to talk a bit about my experience with NLP, which I primarily obtained from the [Natural Language Processing Nanodegree course from Udacity](https://www.udacity.com/course/natural-language-processing-nanodegree--nd892).
