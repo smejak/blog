@@ -56,7 +56,7 @@ As it turns out, the number of spikes is the same as before. The following quest
 
 differential equation modelling the exponential integrate-and-fire neuron
 
-In the leaky integrate-and-fire case, we only needed to consider the differeference between the threshold voltage and the rest voltage, however, this time we also have the exponential term. Firstly, what is the threshold we want to reach to get a spike? Based on the plot above, it is not the firing threshold, so what's left is the rheobase threshold. Secondly, let's consider the role of the sharpness parameter $\Delta_T$ for a moment. This parameter really only affects the shape of the voltage curve once we reach the rheobase threshold.
+In the leaky integrate-and-fire case, we only needed to consider the difference between the threshold voltage and the rest voltage, however, this time we also have the exponential term. Firstly, what is the threshold we want to reach to get a spike? Based on the plot above, it is not the firing threshold, so what's left is the rheobase threshold. Secondly, let's consider the role of the sharpness parameter $\Delta_T$ for a moment. This parameter really only affects the shape of the voltage curve once we reach the rheobase threshold.
 
 ![](./sharpness.png)
 
