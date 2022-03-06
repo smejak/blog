@@ -60,7 +60,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -146,6 +145,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-gatsby-cloud`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
