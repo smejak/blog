@@ -2,6 +2,8 @@
 title: Neuronal Dynamics - Exponential Integrate and Fire Neuron Model
 date: "2021-12-03 21:00:00"
 ---
+import TeX from '@matejmazur/react-katex';
+
 
 This is part 2 of my blog series covering the contents and exercises from [Neuronal Dynamics](https://neuronaldynamics.epfl.ch/). Last time, we went over the notion of the Leaky Integrate and Fire neuron and we explored the accompanying Python exercises. Today, we're looking at the Exponential Integrate and Fire model of a neuron, which fits into a broader category of nonlinear neuron models.
 
@@ -11,7 +13,7 @@ A general nonlinear integrate and fire neuron is described by the following equa
 
 differential equation modelling a general nonlinear neuron
 
-where $u$ is the memebrane potential (measured in mV), $\tau$ is the time constant, $f(u)$ is a voltage function, $ R(u) $ is input resistance, and $I$ is the input current. The Exponential IF neuron is then modelled by:
+where $u$ is the memebrane potential (measured in mV), <TeX math="\tau"/> is the time constant, $f(u)$ is a voltage function, <TeX math="R(u)" /> is input resistance, and $I$ is the input current. The Exponential IF neuron is then modelled by:
 
 ![differential equation modelling the exponential integrate-and-fire neuron](./exp-if.png)
 
