@@ -2,9 +2,6 @@
 title: Dendritic AI as a next step in intelligence emulation
 date: "2021-08-11 11:00:00"
 ---
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/dhmUPTDVaRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
 
 Artificial neural networks, AI, machine learning, deep learning, or whatever you want to call it (true, they’re not the same thing, but people do use them interchangeably), have achieved incredible things in the last couple of decades. Just imagine, a deep neural network can recognize countless different objects in pictures, sometimes even better than humans can (don’t suppose you’re going to beat a DNN at Where’s Waldo), they can replicate the music styles of famous composers and create new pieces that neither one of us could distinguish from the original, and they can generate text to answer questions and make you feel really uncomfortable about the possibility of its superior intelligence (not to mention the work done in deep reinforcement learning achieving superhuman performance in games and countless other tasks). It’s all truly amazing, but… is it really intelligent? Well, I won’t get into too much detail here since I actually have something to talk about, so to make a long story short, the simple fact is that AI is still very limited, especially when compared to biological computers, AKA brains. To make a deep neural network really good at something, here’s what you need (and what can go wrong): 
 1. a lot of good training data (“good” meaning it actually represents a large variety of the population of possible data and not just a subset that can share a common flaw)

@@ -2,9 +2,6 @@
 title: Neuromorphic Computing...?
 date: "2021-08-23 15:00:00"
 ---
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/llOmoIqF_SA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
 
 I’ve talked about how artificial intelligence can be improved by emulating the biological structure and properties of neurons and brains in general. 
 

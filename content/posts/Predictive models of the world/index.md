@@ -2,9 +2,6 @@
 title: Predictive models of the world
 date: "2021-07-13 19:00:00"
 ---
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/SI85cqgYOII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
 
 So where do we start when we want to talk about human intelligence? Let’s first establish what part of the brain we want to focus on. There are many difficult sounding words to describe all the different parts of the brain, but since we’re at the beginning, it is useful for us to use the simple distinction that the brain is essentially divided into two parts: 
 - the old brain 
