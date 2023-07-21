@@ -13,7 +13,7 @@ A general nonlinear integrate and fire neuron is described by the following equa
 
 differential equation modelling a general nonlinear neuron
 
-where $u$ is the memebrane potential (measured in mV), <TeX math="\tau"/> is the time constant, $f(u)$ is a voltage function, <TeX math="R(u)" /> is input resistance, and $I$ is the input current. The Exponential IF neuron is then modelled by:
+where $u$ is the membrane potential (measured in mV), <TeX math="\tau"/> is the time constant, $f(u)$ is a voltage function, <TeX math="R(u)" /> is input resistance, and $I$ is the input current. The Exponential IF neuron is then modelled by:
 
 ![differential equation modelling the exponential integrate-and-fire neuron](./exp-if.png)
 

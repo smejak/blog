@@ -3,6 +3,19 @@ title: About
 slug: "/about"
 ---
 
-I am a student researcher and developer working at the intersection of AI, neuroscience, and Web3. I am developing tools for the decentralized AI economy at [Algovera](https://www.algovera.ai/) and am researching computational applications of active inference for artificial cognitive agents at the [Active Inference Institute](https://activeinference.org). I am also involved in decentralized science (DeSci) with my work on token engineering for the knowledge commons at [OpSci](https://opsci.io/).
+import React from 'react';
+import styles from './about.module.css';
 
-I am interested in questions about intelligence and its role in balancing complexity (likely significant).
+<div className={styles.aboutContainer}>
+  <div className={styles.textContainer}>
+    <p>
+      I am a student researcher and developer working at the intersection of AI, neuroscience, and Web3. I am developing tools for the decentralized AI economy at <a href='https://www.algovera.ai/'>Algovera</a> and am researching computational applications of active inference for artificial cognitive agents at the <a href='https://activeinference.org'>Active Inference Institute</a>. I am also involved in decentralized science (DeSci) with my work on token engineering for the knowledge commons at <a href='https://opsci.io/'>OpSci</a>.
+    </p>
+    <p>
+      I am interested in questions about intelligence and its role in balancing complexity (likely significant).
+    </p>
+  </div>
+  <div className={styles.imageContainer}>
+    <img className={styles.aboutImage} src='IMG_3935.jpeg' alt='About me' />
+  </div>
+</div>
