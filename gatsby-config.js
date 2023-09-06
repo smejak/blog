@@ -65,7 +65,7 @@ module.exports = {
       options: {
         name: `Jakub Smekal Blog`,
         short_name: `Jakub Smekal`,
-        description: `Jakub Smékal personal website, blog about machine learning, neuroscience, blockchain, and more.`,
+        description: `Jakub Smékal personal website.`,
         start_url: `/`,
         background_color: `#fff`,
         // This will impact how browsers show your PWA/website
