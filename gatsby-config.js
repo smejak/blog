@@ -37,13 +37,9 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
+            name: `X`,
             url: `https://twitter.com/jakub_smekal`,
-          },
-          {
-            name: `LinkedIn`,
-            url: `https://www.linkedin.com/in/jakub-smekal`,
-          },
+          }
         ],
       },
     },
