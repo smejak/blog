@@ -37,6 +37,10 @@ module.exports = {
         ],
         externalLinks: [
           {
+            name: `Komplex`,
+            url: `https://coda.io/@jakub-smekal/komplex`,
+          },
+          {
             name: `X`,
             url: `https://twitter.com/jakub_smekal`,
           }
