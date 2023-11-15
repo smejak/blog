@@ -1,9 +1,19 @@
-<Text sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>
-  Hello 👋
+import { Image, Box, Flex, Heading, Text } from 'theme-ui'
 
-  I am Jakub Smékal.
-
-  Thank you for visiting this website.
-</Text>
-
-Take a look around. Feel free to connect with me through the links above. I'd love to hear from you!
+<Flex sx={{ flexDirection: ['column', 'row'], alignItems: 'center', justifyContent: 'center', textAlign: 'left' }}>
+  <Image src="/hsht2.png" alt="Descriptive Alt Text" sx={{ width: 'auto', maxWidth: '300px', mr: 4, mb: [4, 0] }} />
+  <Box>
+    <Heading as="h1" sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading`, mb: 3 }}>
+      Hello 👋
+      <br />
+      
+    </Heading>
+    <Heading as="h3" sx={{ fontSize: [2, 3], fontWeight: `semibold`, color: `heading`, mb: 4 }}>
+      I am a PhD student in Applied Physics at Stanford University researching deep learning and theoretical neuroscience.
+    </Heading>
+    <Text sx={{ fontSize: [2, 3], color: `heading`, mb: 4 }}>
+    
+    
+    </Text>
+  </Box>
+</Flex>
