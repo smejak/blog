@@ -1,6 +1,6 @@
 ---
 title: Starting in mechanistic interpretability
-date: "2023-01-22 10:00:00"
+date: "2024-01-22 10:00:00"
 ---
 
 I recently began exploring the field of mechanistic interpretability. It’s fascinating in a very similar way as the field of active inference ~1-2 years ago (let’s hope it maintains that in the way as actinf has), as in it seems to attract a lot of researchers from multiple disciplines, and there’s a number of different threads to consider before one gets an idea on what is going on. It’s also still very new, which I found out by diving into multiple papers that turned out to be about more or less the same underlying concept (finding causal structure in transformers), but which used completely different terms and approaches. So in this short post, I wanted to write a few half-baked thoughts on the different threads in mech interp and some open questions.

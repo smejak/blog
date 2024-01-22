@@ -37,6 +37,10 @@ module.exports = {
         ],
         externalLinks: [
           {
+            name: `SAIF`,
+            url: `https://stanfordactinf.org/`,
+          },
+          {
             name: `Komplex`,
             url: `https://coda.io/@jakub-smekal/komplex`,
           },
