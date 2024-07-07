@@ -11,7 +11,7 @@ module.exports = {
     siteTitleAlt: `Jakub Smékal`,
     siteHeadline: `Jakub Smékal`,
     siteUrl: `https://www.jakubsmekal.com`,
-    siteDescription: `Jakub Smékal personal website, blog about machine learning, neuroscience, blockchain, and more.`,
+    siteDescription: `Jakub Smékal personal website`,
     siteLanguage: `en`,
     siteImage: `/headshot.jpg`,
     author: `@jakub_smekal`,
@@ -22,14 +22,6 @@ module.exports = {
       // See the theme's README for all available options
       options: {
         navigation: [
-          {
-            title: `About`,
-            slug: `/about`,
-          },
-          {
-            title: `Research`,
-            slug: `/research`,
-          },
           {
             title: `Blog`,
             slug: `/blog`,
@@ -62,9 +54,13 @@ module.exports = {
         // See: https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog#changing-your-fonts
         web: [
           {
-            name: `IBM Plex Sans`,
-            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap`,
-          },
+            name: `EB Garamond`,
+            file: `https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap`,
+          },          
+          // {
+          //   name: `IBM Plex Sans`,
+          //   file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap`,
+          // },
         ],
       },
     },
